@@ -1,0 +1,27 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/reneolivo/Desktop/libs/node-v4/bin/node',
+1 verbose cli   '/home/reneolivo/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'cucumber' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.1
+4 verbose run-script [ 'precucumber', 'cucumber', 'postcucumber' ]
+5 info precucumber aurelia-skeleton-navigation@1.0.0-beta.1.0.5
+6 info cucumber aurelia-skeleton-navigation@1.0.0-beta.1.0.5
+7 verbose unsafe-perm in lifecycle true
+8 verbose stack Error: write EPIPE
+8 verbose stack     at Object.exports._errnoException (util.js:874:11)
+8 verbose stack     at exports._exceptionWithHostPort (util.js:897:20)
+8 verbose stack     at WriteWrap.afterWrite (net.js:763:14)
+9 verbose cwd /home/reneolivo/Desktop/work/charlas/bdd-ui-2016-01-28
+10 error Linux 4.2.0-23-generic
+11 error argv "/home/reneolivo/Desktop/libs/node-v4/bin/node" "/home/reneolivo/bin/npm" "run" "cucumber"
+12 error node v4.2.1
+13 error npm  v2.14.7
+14 error code EPIPE
+15 error errno EPIPE
+16 error syscall write
+17 error write EPIPE
+18 error If you need help, you may report this error at:
+18 error     <https://github.com/npm/npm/issues>
+19 verbose exit [ 1, true ]
