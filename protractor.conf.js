@@ -18,6 +18,9 @@ exports.config = {
   frameworkPath: 'node_modules/protractor-cucumber-framework',
   cucumberOpts: {
     format: 'pretty',
-    require: 'test/e2e/features/'
+    require: 'test/e2e/features/',
+    tags: [
+      '@runThis'
+    ]
   }
 };
