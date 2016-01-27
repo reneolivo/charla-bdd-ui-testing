@@ -16,4 +16,7 @@ function execProtractor() {
 gulp.task('cucumber', function() {
   execProtractor();
   gulp.watch(paths.e2eSpecsSrc, execProtractor).on('change', reportChange);
+  gulp.watch(paths.source, ['build-system', execProtractor]).on('change', reportChange);
+  gulp.watch(paths.html, ['build-html', execProtractor]).on('change', reportChange);
+  gulp.watch(paths.css, ['build-css', execProtractor]).on('change', reportChange);
 });

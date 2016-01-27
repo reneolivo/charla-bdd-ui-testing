@@ -1,6 +1,7 @@
 module.exports = function() {
   function accessUrl(url, cb) {
     browser.loadAndWaitForAureliaPage('http://localhost:9000/#' + url);
+    browser.waitForRouterComplete();
     cb();
   }
 

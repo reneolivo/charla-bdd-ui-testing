@@ -1,4 +1,3 @@
-@runThis
 Feature: Home Page
   As a user of the rent-a-car portal
   I want to be able to access the welcome page
