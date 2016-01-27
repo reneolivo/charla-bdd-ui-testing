@@ -1,11 +1,11 @@
 module.exports = function() {
-  this.Given(/^I access "([^"]*)"$/, function(url, cb) {
+  function accessUrl(url, cb) {
     browser
       .loadAndWaitForAureliaPage('http://localhost:9000/#' + url)
       .then(function() {
-        //Wait for router or resolve after 200ms timeout
+        //Wait for router or resolve after 1s timeout
         return new Promise(function(resolve) {
-          setTimeout(function() { resolve(); }, 200);
+          setTimeout(function() { resolve(); }, 1000);
           browser
             .waitForRouterComplete()
             .then(function() { resolve(); });
@@ -14,9 +14,13 @@ module.exports = function() {
       .then(function() {
         cb();
       });
-  });
+  }
 
-this.Then(/^the page title should be "([^"]*)"$/, function (title, callback) {
+  this.Given(/^I access "([^"]*)"$/, accessUrl);
+  this.Given(/^I access the "([^"]*)" page$/, accessUrl);
+
+
+  this.Then(/^the page title should be "([^"]*)"$/, function (title, callback) {
     this.expect(browser.getTitle())
       .to.eventually.equal(title)
       .and.notify(callback);

@@ -16,8 +16,9 @@ Scenario: List of cars
 Scenario: Car details
   Given a list of cars to rent
   And I access the "/welcome" page
-  Then each car should have a picture
-  And a name
-  And a description
-  And an availability identifier
-  And and a price
+  Then each car should display the following fields:
+    | a picture                    |
+    | a name                       |
+    | a description                |
+    | an availability identifier   |
+    | and a price                  |
