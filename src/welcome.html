@@ -3,7 +3,11 @@
     <h2>${heading}</h2>
 
     <article class="car" repeat.for="car of cars">
+      <img src.bind="car.image" />
       <h3>${car.name}</h3>
+      <span class="available availability" if.bind="car.available">Available</span>
+      <span class="unavailable availability" if.bind="!car.available">Unavailable</span>
+      <p class="price">Rent it for $${car.price}</p>
     </article>
   </section>
 </template>

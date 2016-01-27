@@ -19,6 +19,5 @@ Feature: Home Page
     Then each car should display the following fields:
       | a picture                    |
       | a name                       |
-      | a description                |
       | an availability identifier   |
       | and a price                  |

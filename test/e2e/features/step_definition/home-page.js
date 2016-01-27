@@ -24,7 +24,8 @@ module.exports = function() {
       var fieldKey = fields[ row ][ 0 ];
       var selector = fieldsCss[ fieldKey ];
       this.expect(car.element(selector).isPresent())
-        .to.eventually.be.true;
+        .to.eventually.be
+        .equal(true, '"'+ fieldKey +'" should be true');
     }
     browser.sleep(200).then(callback);
   });
