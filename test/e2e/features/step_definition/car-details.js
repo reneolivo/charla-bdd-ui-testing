@@ -1,10 +1,13 @@
 module.exports = function() {
   this.When(/^I click on any car$/, function (callback) {
-    callback.pending();
+    element(by.id('car-1')).click();
+    callback();
   });
 
   this.Then(/^I should be redirected to that car details page$/, function (callback) {
-    callback.pending();
+    this.expect(browser.getCurrentUrl())
+      .to.eventually.match(/#\/cars\/1/)
+      .and.notify(callback);
   });
 
   this.Then(/^I should see the details for the car with the id "([^"]*)"$/, function (arg1, callback) {

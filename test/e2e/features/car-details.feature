@@ -1,9 +1,10 @@
 Feature: Car Details
   As a user I want to be able to access
   any car details
-  So I can make a better decision when 
+  So I can make a better decision when
   renting a car
 
+@runThis
 Scenario: Access car details from welcome page
   Given I access "/welcome"
   When I click on any car

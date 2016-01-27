@@ -2,12 +2,14 @@
   <section class="au-animate">
     <h2>${heading}</h2>
 
-    <article class="car" repeat.for="car of cars">
-      <img src.bind="car.image" />
-      <h3>${car.name}</h3>
-      <span class="available availability" if.bind="car.available">Available</span>
-      <span class="unavailable availability" if.bind="!car.available">Unavailable</span>
-      <p class="price">Rent it for $${car.price}</p>
+    <article id="car-${car.id}" class="car" repeat.for="car of cars">
+      <a href="#/cars/1">
+        <img src.bind="car.image" />
+        <h3>${car.name}</h3>
+        <span class="available availability" if.bind="car.available">Available</span>
+        <span class="unavailable availability" if.bind="!car.available">Unavailable</span>
+        <p class="price">Rent it for $${car.price}</p>
+      </a>
     </article>
   </section>
 </template>
