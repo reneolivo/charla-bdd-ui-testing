@@ -1,3 +1,8 @@
 <template>
-  <h1>Details</h1>
+  <article id="car-${car.id}-details">
+    <h2>${car.name}</h2>
+    <figure class="gallery">
+      <img repeat.for="image of car.images" src.bind="image" />
+    </figure>
+  </article>
 </template>

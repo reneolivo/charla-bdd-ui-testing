@@ -28,6 +28,8 @@
     "aurelia-tools": "^0.1.18",
     "babel": "^5.8.23",
     "babel-eslint": "^4.1.3",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.4.5",
     "browser-sync": "^2.10.0",
     "chai": "^3.4.1",
     "chai-as-promised": "^5.2.0",
@@ -81,6 +83,7 @@
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
       "fetch": "github:github/fetch@^0.10.1",
       "font-awesome": "npm:font-awesome@^4.5.0",
+      "nedb": "npm:nedb@^1.7.2",
       "text": "github:systemjs/plugin-text@^0.0.3"
     },
     "devDependencies": {
@@ -93,5 +96,8 @@
         "main": "client/shim.min"
       }
     }
+  },
+  "dependencies": {
+    "nedb": "^1.7.2"
   }
 }

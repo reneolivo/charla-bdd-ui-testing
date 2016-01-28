@@ -10,7 +10,7 @@ export class Welcome {
   }
 
   activate() {
-    this.carService
+    return this.carService
       .getAll()
       .then((cars) => {
         this.cars = cars;
