@@ -1,8 +1,16 @@
 <template>
   <article id="car-${car.id}-details">
-    <h2>${car.name}</h2>
     <figure class="gallery">
       <img repeat.for="image of car.images" src.bind="image" />
     </figure>
+    <h2>${car.name}</h2>
+    <strong class="available availability" if.bind="car.available">
+      available
+    </strong>
+    <strong class="unavailable availability" if.bind="!car.available">
+      unavailable
+    </strong>
+    <p class="description">${car.description}</p>
+    <p>Rent for: $<span class="price">${car.price}</span></p>
   </article>
 </template>

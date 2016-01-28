@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export const cars = [
   {
     "id": 1,
@@ -5,6 +7,7 @@ export const cars = [
       "http://www.pakwheels.com/forums/attachments/news-articles-motorists-education/115159-mitsubishi-lancer-2010-mitsubishi-lancer-2010.jpg"
     ],
     "name": "Mitsubishi Lancer 2010",
+    "description": "A Mitsubishi Lancer 2010 for rent",
     "make": 1,
     "model": 1,
     "year": 2010,
@@ -17,6 +20,7 @@ export const cars = [
       "http://carsredesigns.com/wp-content/uploads/2014/03/2015-Toyota-Corolla.jpg"
     ],
     "name": "Toyota Corolla 2015",
+    "description": "A Toyota Corolla 2015 that is not for rent",
     "make": 2,
     "model": 2,
     "year": 2015,

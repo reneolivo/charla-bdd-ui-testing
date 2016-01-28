@@ -29,28 +29,32 @@ module.exports = function() {
       },
 
       'a name': function() {
-        self.expect(element(by.css('h2')).getText())
-          .to.eventually.equal(car.name,
-            'Car name should equal: ' + car.name);
+        var h2 = element(by.css('h2'));
+        var error = 'Car name should equal: ' + car.name;
+
+        self.expectField(h2, car.name, error);
       },
 
       'a description': function() {
-        self.expect(element(by.css('.description')).getText())
-          .to.eventually.equal(car.description,
-            'Car description should equal: ' + car.description);
+        var description = element(by.css('.description'));
+        var error = 'Car description should equal: ' + car.description;
+
+        self.expectField(description, car.description, error);
       },
 
       'an availability identifier': function() {
-        var availability = car.available ? 'available' : 'not available';
-        self.expect(element(by.css('.availability')).getText())
-          .to.eventually.equal(availability,
-            'Car availability should equal: ' + availability);
+        var availability = element(by.css('.availability'));
+        var availabilityText = car.available ? 'available' : 'not available';
+        var error = 'Car availability should equal: ' + availabilityText;
+
+        self.expectField(availability, availabilityText, error);
       },
 
       'and a price': function() {
-        self.expect(element(by.css('.price')).getText())
-          .to.eventually.equal(car.price,
-            'Car price should equal: ' + car.price);
+        var price = element(by.css('.price'));
+        var error = 'Car price should equal: ' + car.price;
+
+        self.expectField(price, car.price + '', error);
       }
     };
 
@@ -64,6 +68,5 @@ module.exports = function() {
     }
     browser.sleep(200).then(callback);
   });
-
 
 };

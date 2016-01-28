@@ -11,7 +11,7 @@ export class CarsService {
 
   getById(id) {
     return new Promise((resolve, reject) => {
-      let car = cars.filter((c) => c.id === id);
+      let car = cars.filter((c) => parseInt(c.id, 10) === parseInt(id, 10));
       if (car.length) return resolve(car[ 0 ]);
       return reject('not-found');
     });
