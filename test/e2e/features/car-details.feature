@@ -13,7 +13,6 @@ Scenario: Access car details directly
   Given I access "/cars/1"
   Then I should see the details for the car with the id 1
 
-@runThis
 Scenario: Car details
   Given I access "/cars/1"
   Then car 1 should display the following fields:

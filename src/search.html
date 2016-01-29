@@ -1,0 +1,9 @@
+<template>
+  <h1>Search</h2>
+
+  <div id="search-results">
+    <article repeat.for="car of cars">
+      <h2 id="car-${car.id}-name">${car.name}</h2>
+    </article>
+  </div>
+</template>

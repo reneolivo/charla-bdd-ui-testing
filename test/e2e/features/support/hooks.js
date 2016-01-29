@@ -4,7 +4,10 @@ module.exports = function() {
   });
 
   this.After(function(scenario, callback) {
-		browser.sleep(200);
     callback();
 	});
+
+  this.registerHandler('AfterFeatures', function (event, callback) {
+    browser.quit().then(callback);
+  });
 };

@@ -7,6 +7,8 @@ exports.config = {
     'browserName': 'chrome'
   },
 
+  restartBrowserBetweenTests: false,
+
   //seleniumAddress: 'http://0.0.0.0:4444',
   specs: ['test/e2e/features/*.feature'],
 
