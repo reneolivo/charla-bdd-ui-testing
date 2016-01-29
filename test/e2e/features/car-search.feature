@@ -1,4 +1,3 @@
-@runThis
 Feature: Search for a car model
   As as user I want to be able to
   search for a car model
